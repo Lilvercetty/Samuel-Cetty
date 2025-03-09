@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel's Car Booking & Riding App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Samuel's Car Booking & Riding App</h1>
+    </header>
+    <div class="container">
+        <h2>Book a Ride</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="pickupLocation">Pickup Location</label>
+                <input type="text" id="pickupLocation" name="pickupLocation" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" name="destination" required>
+            </div>
+            <div class="form-group">
+                <label for="carType">Car Type</label>
+                <select id="carType" name="carType" required>
+                    <option value="economy">Economy</option>
+                    <option value="comfort">Comfort</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickupTime">Pickup Time</label>
+                <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+            </div>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 Samuel's Car Booking & Riding App. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your ride has been booked successfully!');
+            // You can add further processing here, like sending data to a server
+        });
+    </script>
+</body>
+</html>
